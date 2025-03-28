@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para mi Amor</title>
-  <!-- Estilos CSS -->
   <style>
-    /* Estilos generales */
     body {
       font-family: 'Arial', sans-serif;
       background-color: #f5f7ff;
@@ -15,8 +13,7 @@
       color: #d81b60;
       line-height: 1.6;
     }
-
-    /* Encabezado */
+    
     .header {
       background: linear-gradient(135deg, #ff9f6b, #8effc3);
       color: white;
@@ -26,7 +23,7 @@
       position: relative;
       overflow: hidden;
     }
-
+    
     .header::before {
       content: "";
       position: absolute;
@@ -37,63 +34,53 @@
       background: rgba(255, 255, 255, 0.2);
       border-radius: 50%;
     }
-
+    
     .header h1 {
       margin: 0;
       font-size: 2.5rem;
       position: relative;
       z-index: 1;
     }
-
+    
     .header p {
       margin: 0.5rem 0 0;
       font-size: 1.2rem;
       position: relative;
       z-index: 1;
     }
-
-    /* Contenedor principal */
+    
     .container {
       max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1.5rem;
     }
-
-    /* Galería de fotos */
+    
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.5rem;
       margin: 3rem 0;
     }
-
+    
     .photo-card {
       background: white;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
     }
-
+    
     .photo-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
-
-    .photo-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    .photo-caption {
-      padding: 1.2rem;
-      text-align: center;
-      font-weight: 500;
-    }
-
-    /* Mensajes */
+    
     .message-box {
       background: white;
       padding: 2rem;
@@ -102,7 +89,7 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       position: relative;
     }
-
+    
     .message-box::after {
       content: "";
       position: absolute;
@@ -115,21 +102,20 @@
       border-right: 15px solid transparent;
       border-top: 15px solid white;
     }
-
+    
     .message-box h2 {
       color: #ff4081;
       margin-top: 0;
       font-size: 1.8rem;
     }
-
-    /* Elementos decorativos */
+    
     .heart {
       color: #ff4081;
       font-size: 1.5rem;
       animation: heartbeat 1.5s infinite;
       display: inline-block;
     }
-
+    
     @keyframes heartbeat {
       0% { transform: scale(1); }
       25% { transform: scale(1.1); }
@@ -137,7 +123,7 @@
       75% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
-
+    
     .floating-hearts {
       position: fixed;
       top: 0;
@@ -147,8 +133,7 @@
       pointer-events: none;
       z-index: -1;
     }
-
-    /* Pie de página */
+    
     footer {
       text-align: center;
       padding: 2rem;
@@ -156,12 +141,7 @@
       color: white;
       margin-top: 3rem;
     }
-
-    footer p {
-      margin: 0;
-    }
-
-    /* Efectos especiales */
+    
     .special-text {
       background: linear-gradient(to right, #ff6b8b, #ff8e9e, #ff6b8b);
       -webkit-background-clip: text;
@@ -169,135 +149,110 @@
       color: transparent;
       font-weight: bold;
     }
-
-    /* Responsive */
+    
     @media (max-width: 768px) {
       .header h1 {
         font-size: 2rem;
       }
-
+      
       .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-<!-- Efecto de corazones flotantes -->
-<div class="floating-hearts" id="hearts-container"></div>
+  <div class="floating-hearts" id="hearts-container"></div>
 
-<!-- Encabezado con título -->
-<header class="header">
-  <h1>Para <span class="special-text">[yuri ]</span> <span class="heart">❤</span></h1>
-  <p>Eres la razón por la que mi corazón late más fuerte</p>
-</header>
+  <header class="header">
+    <h1>Para <span class="special-text">Yuri</span> <span class="heart">❤</span></h1>
+    <p>Eres la razón por la que mi corazón late más fuerte</p>
+  </header>
 
-<!-- Contenido principal -->
-<main class="container">
-  <!-- Mensaje de amor -->
-  <section class="message-box">
-    <h2>Mi Querida <span class="special-text">YURI </span>,</h2>
-    <p>Desde el momento en que entraste en mi vida, todo cobró un nuevo significado. Cada día a tu lado es una aventura, cada mirada tuya es un regalo, y cada sonrisa tuya ilumina mi mundo.</p>
-    <p>Quería crear este pequeño espacio para recordarte lo especial que eres para mí y todos los maravillosos momentos que hemos compartido juntos.</p>
-    <p>Con todo mi amor y feliz de que siempre sea nuestro aniversario 19/12/21,</p>
-    <p><strong>[ISAAC ]</strong></p>
-  </section>
+  <main class="container">
+    <section class="message-box">
+      <h2>Mi Querida <span class="special-text">Yuri</span>,</h2>
+      <p>Desde el momento en que entraste en mi vida, todo cobró un nuevo significado. Cada día a tu lado es una aventura, cada mirada tuya es un regalo, y cada sonrisa tuya ilumina mi mundo.</p>
+      <p>Quería crear este pequeño espacio para recordarte lo especial que eres para mí y todos los maravillosos momentos que hemos compartido juntos.</p>
+      <p>Con todo mi amor y feliz de que siempre sea nuestro aniversario 19/12/21,</p>
+      <p><strong>Isaac</strong></p>
+    </section>
 
-  <!-- Galería de fotos -->
-  <h2>Nuestra Historia en Imágenes <span class="heart">❤</span></h2>
-  <div class="gallery">
-    <!-- Foto 1 -->
-    <div class="photo-card">
-      <img src="" alt="Nuestro primer momento juntos">
-      <div class="photo-caption">El día que todo comenzó siempre seras el amor de mi vida</div>
+    <h2>Nuestra Historia en Imágenes <span class="heart">❤</span></h2>
+    <div class="gallery">
+      <div class="photo-card">
+        <div>El día que todo comenzó siempre serás el amor de mi vida</div>
+      </div>
+      
+      <div class="photo-card">
+        <div>Nuestras aventuras que se vienen a futuro</div>
+      </div>
+      
+      <div class="photo-card">
+        <div>Momentos que atesoro</div>
+      </div>
+      
+      <div class="photo-card">
+        <div>Tus risas son mi melodía favorita</div>
+      </div>
+      
+      <div class="photo-card">
+        <div>Mi persona favorita en el mundo</div>
+      </div>
+      
+      <div class="photo-card">
+        <div>Simplemente... TE AMO</div>
+      </div>
     </div>
 
-    <!-- Foto 2 -->
-    <div class="photo-card">
-      <img src="" alt="Aventuras compartidas">
-      <div class="photo-caption">Nuestras aventuras que se vienen a futuro </div>
-    </div>
+    <section class="message-box">
+      <h2>Una Promesa Eterna</h2>
+      <p>Prometo amarte en cada amanecer, acompañarte en cada atardecer y ser tu refugio en cada noche. Prometo ser tu cómplice en las risas, tu apoyo en los desafíos y tu compañero en esta maravillosa aventura llamada vida.</p>
+      <p>Eres mi hoy y todos mis mañanas. <span class="heart">❤</span></p>
+    </section>
+  </main>
 
-    <!-- Foto 3 -->
-    <div class="photo-card">
-      <img src="" alt="Momentos especiales">
-      <div class="photo-caption">Momentos que atesoro</div>
-    </div>
+  <footer>
+    <p>Hecho con todo mi amor para <strong>Yuri Alicia</strong> - <span id="current-date"></span></p>
+  </footer>
 
-    <!-- Foto 4 -->
-    <div class="photo-card">
-      <img src="" alt="Risas y alegría">
-      <div class="photo-caption">Tus risas son mi melodía favorita</div>
-    </div>
+  <script>
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('es-ES', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
 
-    <!-- Foto 5 -->
-    <div class="photo-card">
-      <img src="" alt="Mi persona favorita">
-      <div class="photo-caption">Mi persona favorita en el mundo</div>
-    </div>
+    function createHearts() {
+      const container = document.getElementById('hearts-container');
+      const heart = document.createElement('div');
+      heart.innerHTML = '❤';
+      heart.style.position = 'absolute';
+      heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = -20 + 'px';
+      heart.style.opacity = Math.random() * 0.5 + 0.5;
+      heart.style.animation = `float ${Math.random() * 5 + 5}s linear forwards`;
 
-    <!-- Foto 6 -->
-    <div class="photo-card">
-      <img src="" alt="Te Amo">
-      <div class="photo-caption">Simplemente... TE AMO</div>
-    </div>
-  </div>
+      container.appendChild(heart);
 
-  <!-- Mensaje final -->
-  <section class="message-box">
-    <h2>Una Promesa Eterna</h2>
-    <p>Prometo amarte en cada amanecer, acompañarte en cada atardecer y ser tu refugio en cada noche. Prometo ser tu cómplice en las risas, tu apoyo en los desafíos y tu compañero en esta maravillosa aventura llamada vida.</p>
-    <p>Eres mi hoy y todos mis mañanas. <span class="heart">❤</span></p>
-  </section>
-</main>
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
 
-<!-- Pie de página -->
-<footer>
-  <p>Hecho con todo mi amor para <strong>[YURI ALICIA]</strong> - <span id="current-date"></span></p>
-</footer>
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes float {
+        to {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
 
-<!-- JavaScript para efectos especiales -->
-<script>
-  // Actualizar la fecha automáticamente
-  document.getElementById('current-date').textContent = new Date().toLocaleDateString('es-ES', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-
-  // Crear corazones flotantes
-  function createHearts() {
-    const container = document.getElementById('hearts-container');
-    const heart = document.createElement('div');
-    heart.innerHTML = '❤';
-    heart.style.position = 'absolute';
-    heart.style.fontSize = Math.random() * 20 + 10 + 'px';
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.top = -20 + 'px';
-    heart.style.opacity = Math.random() * 0.5 + 0.5;
-    heart.style.animation = `float ${Math.random() * 5 + 5}s linear forwards`;
-
-    container.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 5000);
-  }
-
-  // Añadir estilos para la animación de flotar
-  const style = document.createElement('style');
-  style.innerHTML = `
-            @keyframes float {
-                to {
-                    transform: translateY(100vh) rotate(360deg);
-                    opacity: 0;
-                }
-            }
-        `;
-  document.head.appendChild(style);
-
-  // Generar corazones periódicamente
-  setInterval(createHearts, 300);
-</script>
+    setInterval(createHearts, 300);
+  </script>
 </body>
 </html>
